@@ -38,7 +38,7 @@ const Inbox = () => {
 
     try {
       const res = await fetch(
-        `https://mail-box-2-82561-default-rtdb.firebaseio.com/${cleanedID}/inbox.json`
+        `https://fir-bc6ea-default-rtdb.firebaseio.com/${cleanedID}/inbox.json`
       );
       if (!res.ok) {
         console.log("Error fetching inbox");

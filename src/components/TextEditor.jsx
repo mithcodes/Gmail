@@ -39,7 +39,7 @@ const TextEditor = ({ toggleEditor }) => {
     try {
     
       await fetch(
-        `https://mail-box-2-82561-default-rtdb.firebaseio.com/${sanitizedReceiverEmail}/inbox.json`,
+        `https://fir-bc6ea-default-rtdb.firebaseio.com/${sanitizedReceiverEmail}/inbox.json`,
         {
           method: "POST",
           body: JSON.stringify(inboxMail),
@@ -51,7 +51,7 @@ const TextEditor = ({ toggleEditor }) => {
 
       
       await fetch(
-        `https://mail-box-2-82561-default-rtdb.firebaseio.com/${sanitizedSenderEmail}/sent.json`,
+        `https://fir-bc6ea-default-rtdb.firebaseio.com/${sanitizedSenderEmail}/sent.json`,
         {
           method: "POST",
           body: JSON.stringify(sentMail),

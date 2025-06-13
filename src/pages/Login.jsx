@@ -34,8 +34,8 @@ const Login = () => {
     }
 
     const URL = isSignIn
-      ? "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCdkLSx_Ma4Y71qVD3pwVCxw47PAC4vAK8"
-      : "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCdkLSx_Ma4Y71qVD3pwVCxw47PAC4vAK8";
+      ? "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0deD4ZD6V9_LrA48_UO2w5EUd1LfE-F4"
+      : "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyA0deD4ZD6V9_LrA48_UO2w5EUd1LfE-F4";
 
     try {
       const response = await fetch(URL, {
@@ -77,7 +77,7 @@ const Login = () => {
 
     try {
       const response = await fetch(
-        "https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyCdkLSx_Ma4Y71qVD3pwVCxw47PAC4vAK8",
+        "https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyA0deD4ZD6V9_LrA48_UO2w5EUd1LfE-F4",
         {
           method: "POST",
           headers: {
