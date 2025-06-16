@@ -57,7 +57,7 @@ const Send = () => {
       }
     
   
-  }, [userID]);
+  }, );
 
   return (
     <div className="flex-1 bg-white rounded-xl mx-5">
