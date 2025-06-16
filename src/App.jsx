@@ -10,7 +10,7 @@ import Home from './layout/Home'
 import Send from './pages/Send'
 import Message from './pages/Message'
 import Login from './pages/Login'
-import Messages from './pages/Messages'
+// import Messages from './pages/Messages'
 import Mail from './pages/Mail'
 
 function App() {
@@ -23,10 +23,11 @@ function App() {
      <Route path="/" element={<Login/>}/> 
       
 <Route path="/home" element={<Home/>}>
+<Route index element={<Send />} />
       <Route path="inbox" element={<Inbox/>}/>
       <Route path="send" element={<Send/>}/>
       {/* <Route path="message" element={<Message/>}/>
-      <Route path="message" element={<Messages/>}/> */}
+       */}
       <Route path="/home/mail" element={<Mail/>}/>
 </Route>
      </Routes>
