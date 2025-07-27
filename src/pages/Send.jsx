@@ -32,7 +32,7 @@ const Send = () => {
 
     try {
       const res = await fetch(
-        `https://fir-bc6ea-default-rtdb.firebaseio.com/${cleanID}/sent.json`
+        `https://fir-df7be-default-rtdb.firebaseio.com/${cleanID}/sent.json`
       );
       if (!res.ok) {
         console.log("Error fetching sent emails");

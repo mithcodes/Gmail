@@ -20,19 +20,7 @@ import { createSlice } from "@reduxjs/toolkit";
         state.sent=action.payload;
     },
 
-    // addInboxMail:(state, action)=>{
-    //  state.inbox.push(action.payload);
-    // },
-
-    // addSentMail:(state, action)=>{
-    //     state.sent.push(action.payload);
-    // },
-
-    // clearEmails:(state)=>{
-    //     state.inbox=[];
-    //     state.sent=[];
-
-    // }
+    
   }
 
 

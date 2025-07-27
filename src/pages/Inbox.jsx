@@ -38,7 +38,7 @@ const Inbox = () => {
 
     try {
       const res = await fetch(
-        `https://fir-bc6ea-default-rtdb.firebaseio.com/${cleanedID}/inbox.json`
+        `https://fir-df7be-default-rtdb.firebaseio.com/${cleanedID}/inbox.json`
       );
       if (!res.ok) {
         console.log("Error fetching inbox");
@@ -98,7 +98,7 @@ const Inbox = () => {
           <IoMdPerson size={20} />
           <p>Social</p>
         </div>
-        <div className="flex gap-1">
+        <div className=" flex gap-1 hidden md:block">
           <MdOutlineUpdate size={20} />
           <p>Updates</p>
         </div>
