@@ -22,6 +22,15 @@ const Login = () => {
     }
   }, [errMsg]);
 
+
+const handleGuestLogin = () => {
+  dispatch(login({ 
+    tokenID: "guest-token",   // Guest ka dummy token
+    userID: "abhishek@gmail.com"  // Guest ka fixed email
+  }));
+  navigate("/home");
+};
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -111,12 +120,12 @@ const Login = () => {
         <div className="flex items-center justify-center min-h-screen relative z-10">
           <form
             onSubmit={handleSubmit}
-            className="w-[90%] md:w-2/6 bg-[#0d081f] bg-opacity-30 p-6 space-y-5 text-center rounded-md shadow-lg outline-1"
+            className="w-[90%] sm:w-2/3 md:w-2/6 bg-[#0d081f] bg-opacity-30 p-6 space-y-5 text-center rounded-md shadow-lg outline-1"
           >
             <img
               src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_dark_1x_r5.png"
               alt="logo"
-              className="w-40 mx-auto"
+              className="w-30 mx-auto"
             />
 
             {forgotPassword ? (
@@ -125,7 +134,7 @@ const Login = () => {
                   ref={email}
                   type="email"
                   placeholder="Email"
-                  className="w-full border border-gray-300 p-1 text-white text-xl"
+                  className="w-full border border-gray-300 p-1 text-white text-xl rounded-md"
                   required
                 />
                 <button
@@ -151,14 +160,14 @@ const Login = () => {
                   ref={email}
                   type="email"
                   placeholder="Email"
-                  className="w-full border border-gray-300 p-1 text-white text-xl"
+                  className="w-full border border-gray-300 p-1 text-white text-xl rounded-md"
                   required
                 />
                 <input
                   ref={password}
                   type="password"
                   placeholder="Password"
-                  className="w-full border border-gray-300 p-1  text-white text-xl"
+                  className="w-full border border-gray-300 p-1  text-white text-xl rounded-md "
                   required
                 />
                 {!isSignIn && (
@@ -173,7 +182,7 @@ const Login = () => {
 
                 <button
                   type="submit"
-                  className="w-full p-3 text-lg rounded-md bg-blue-700 hover:bg-blue-950 text-white font-semibold"
+                  className="w-full p-2 text-lg rounded-md bg-blue-700 hover:bg-blue-950 text-white font-semibold"
                 >
                   {isSignIn ? "Login" : "Sign Up"}
                 </button>
@@ -195,6 +204,15 @@ const Login = () => {
                     {isSignIn ? "Sign up" : "Login"}
                   </button>
                 </p>
+
+<button
+  type="button"
+  onClick={handleGuestLogin}
+  className="w-full p-1 text-lg rounded-md bg-green-600 hover:bg-green-800 text-white font-semibold mt-1"
+>
+  Continue as Guest
+</button>
+
               </>
             )}
           </form>

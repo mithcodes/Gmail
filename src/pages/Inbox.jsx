@@ -67,7 +67,7 @@ const Inbox = () => {
   }, [userID]);
 
   return (
-    <div className="flex-1 bg-white rounded-xl mx-5">
+    <div className="flex-1 bg-white rounded-xl mx-5 mb-2">
       {/* Top bar */}
       <div className="flex items-center justify-between px-4">
         <div className="flex items-center gap-2 text-gray-700 py-2">

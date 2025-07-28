@@ -13,11 +13,11 @@ import { createSlice } from "@reduxjs/toolkit";
 
   reducers:{
     setInbox:(state,action)=>{
-      state.inbox=action.payload;
+      state.inbox=action.payload.reverse();
     },
 
     setSent:(state,action)=>{
-        state.sent=action.payload;
+        state.sent=action.payload.reverse();
     },
 
     

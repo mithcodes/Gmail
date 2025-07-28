@@ -17,11 +17,12 @@ const Message = ({ email, type }) => {
   };
 
   return (
+
     <div
       onClick={openMail} 
       className="flex items-start justify-between border-b border-gray-200 px-4 text-sm hover:cursor-pointer hover:shadow-md py-1"
     >
-      <div className="flex items-center gap-1 md:gap-3">
+      <div className="flex items-center gap-1 md:gap-4">
         <MdCropSquare className="w-5 h-5 text-gray-300" />
         <RiStarLine className="w-5 h-5 text-gray-300" />
       </div>

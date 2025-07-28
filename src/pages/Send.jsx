@@ -57,10 +57,11 @@ const Send = () => {
       }
     
   
+  // }, [userID]);
   }, );
 
   return (
-    <div className="flex-1 bg-white rounded-xl mx-5">
+    <div className="flex-1 bg-white rounded-xl mx-5 ">
       {/* Top bar */}
       <div className="flex items-center justify-between px-4">
         <div className="flex items-center gap-2 text-gray-700 py-2">
@@ -78,7 +79,7 @@ const Send = () => {
       </div>
 
       {/* Categories */}
-      <div className="flex items-center gap-4 mx-3">
+      <div className="flex items-center gap-4 mx-3 mb-5">
         <div className="flex gap-1 cursor-pointer">
           <MdInbox size={20} />
           <p>Primary</p>
@@ -100,7 +101,7 @@ const Send = () => {
       <hr className="border-t border-gray-200 w-full my-2" />
 
       {/* Messages */}
-      <div className="h-[90vh] overflow-y-auto">
+      <div className="h-[70vh] overflow-y-auto">
         {filterSent.length === 0 ? (
           <p className="text-center text-gray-500 mt-10">No sent emails</p>
         ) : (
