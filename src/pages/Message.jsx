@@ -20,7 +20,7 @@ const Message = ({ email, type }) => {
 
     <div
       onClick={openMail} 
-      className="flex items-start justify-between border-b border-gray-200 px-4 text-sm hover:cursor-pointer hover:shadow-md py-1 "
+      className="flex items-start justify-between border-b border-gray-200 px-4 text-sm hover:cursor-pointer hover:shadow-md py-1 mx-2 "
     >
       <div className="flex items-center  gap-1 md:gap-4">
 

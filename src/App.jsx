@@ -12,6 +12,7 @@ import Message from './pages/Message'
 import Login from './pages/Login'
 // import Messages from './pages/Messages'
 import Mail from './pages/Mail'
+import ProtectedRoute from './components/ProtectedRoute'
 
 function App() {
   
@@ -21,8 +22,15 @@ function App() {
    
     <Routes>
      <Route path="/" element={<Login/>}/> 
-      
-<Route path="/home" element={<Home/>}>
+
+     <Route path="/home" element={
+  <ProtectedRoute>
+    <Home />
+  </ProtectedRoute>
+}>
+  {/* <ProtectedRoute */}
+
+{/* <Route path="/home" element={<Home/>}> */}
 <Route index element={<Send />} />
       <Route path="inbox" element={<Inbox/>}/>
       <Route path="send" element={<Send/>}/>
