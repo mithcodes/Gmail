@@ -32,12 +32,20 @@ const Sidebar = ({ toggleEditor }) => {
 
   return (
     <div className="w-[15%] gap-y-1">
-      <div onClick={toggleEditor} className="p-1 md:p-3">
+      <div onClick={toggleEditor} className="hidden md:block  p-1 md:p-3">
         <button className="flex items-center md:gap-2 p-1 md:p-4 rounded-2xl hover:shadow-md bg-[#C2E7FF] font-medium">
-          <LuPencil size={24} />
+          <LuPencil size={20} />
           Compose
         </button>
       </div>
+
+      <div onClick={toggleEditor} className="md:hidden fixed bottom-4 right-4">
+  <button className="flex items-center gap-2 px-4 py-3 rounded-full shadow-lg bg-[#C2E7FF] font-medium">
+    <LuPencil size={20} />
+    Compose
+  </button>
+</div>
+
 
       <div className="text-gr-200">
         {/* Inbox */}

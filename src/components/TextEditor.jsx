@@ -111,6 +111,9 @@ const TextEditor = ({ toggleEditor }) => {
           <Editor
             editorState={editorState}
             onEditorStateChange={setEditorState}
+            toolbar={{
+    options: [], 
+  }}
             toolbarClassName="bg-gray-100 border-b px-2"
             editorClassName="px-3 py-6 bg-gray-100 min-h-[150px]"
             wrapperClassName="mb-2"

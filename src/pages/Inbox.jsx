@@ -98,10 +98,11 @@ const Inbox = () => {
           <IoMdPerson size={20} />
           <p>Social</p>
         </div>
-        <div className=" flex gap-1 hidden md:block">
-          <MdOutlineUpdate size={20} />
-          <p>Updates</p>
-        </div>
+        <div className="hidden md:flex gap-1 cursor-pointer">
+    <MdOutlineUpdate size={20} />
+    <p>Updates</p>
+  </div>
+
       </div>
 
       <hr className="border-t border-gray-200 w-full my-2" />

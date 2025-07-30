@@ -61,7 +61,8 @@ const Send = () => {
   }, );
 
   return (
-    <div className="flex-1 bg-white rounded-xl mx-5 ">
+    
+    <div className="flex-1 bg-white rounded-xl mx-0 ">
       {/* Top bar */}
       <div className="flex items-center justify-between px-4">
         <div className="flex items-center gap-2 text-gray-700 py-2">
@@ -92,10 +93,10 @@ const Send = () => {
           <IoMdPerson size={20} />
           <p>Social</p>
         </div>
-        <div className="flex gap-1">
-          <MdOutlineUpdate size={20} />
-          <p>Updates</p>
-        </div>
+          <div className="hidden md:flex gap-1 cursor-pointer">
+    <MdOutlineUpdate size={20} />
+    <p>Updates</p>
+  </div>
       </div>
 
       <hr className="border-t border-gray-200 w-full my-2" />
@@ -103,7 +104,7 @@ const Send = () => {
       {/* Messages */}
       <div className="h-[70vh] overflow-y-auto">
         {filterSent.length === 0 ? (
-          <p className="text-center text-gray-500 mt-10">No sent emails</p>
+          <p className="text-center text-gray-500 mt-10"></p>
         ) : (
           filterSent.map((email) => <Message key={email.id} email={email} type="sent" />)
         )}
